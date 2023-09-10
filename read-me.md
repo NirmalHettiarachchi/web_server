@@ -1,18 +1,35 @@
-# Simple Python Web Server
+# SCS2205 Computer Networks I: Simple Python Web Server
 
-This is a simple Python web server that serves static and dynamic content. It can handle HTTP GET and POST requests and supports both PHP and HTML files.
+This is a simple Python web server that can handle HTTP GET and POST requests and also supports both PHP and HTML files.
 
 ## Prerequisites
 
 Before running the server, make sure you have the following dependencies installed:
 
-- Python 3.x
-- PHP (for running PHP scripts)
+- Python 3
+- PHP
 
 ## Usage
 
-1. Clone this repository or download the `web_server.py` file to your local machine.
+- Start the server by running the following command after navigating into the project directory:
+```
+python web_server.py
+```
+The server will start listening on the port 2728 (default).
 
-2. Customize the configuration settings at the top of the `web_server.py` script if needed. You can change the server port, resource directory, and supported file extensions.
+- Place the HTML and PHP files in the `htdocs` directory. You can organize your files into subdirectories as well.
 
-3. Start the server by running the following command:
+- Access the web server from your browser by navigating to `http://localhost:2728/`.
+
+## Supported File Types
+
+By default, the server supports HTML and PHP file types. 
+
+## Server Details
+
+- The server parses HTTP requests, extracts request headers and handles GET and POST requests.
+- It serves HTML and PHP files from the `htdocs` directory.
+- If a requested resource is not found, it returns a 404 error page.
+
+
+
