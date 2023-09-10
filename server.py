@@ -47,7 +47,7 @@ def get_req_header_details(data):
         query_string = data.splitlines()[-1]
 
     parameters = parse_parameters_from_path(query_string) # Return the quesry_string as a dictionary
-    resource_path = decide_resource_file_path(resource_path) # If there isn't a resource path specified, it will be set to "resource_path/index.html"
+    resource_path = decide_resource_file_path(resource_path) # If there isn't a resource path specified, it will be set to "resource_path/index.php"
     resource_path = resource_path.replace("//", "/")
 
     return {
@@ -138,7 +138,7 @@ def create_response(protocol, status_details, resource):
 
 # Function to start the server
 def main():
-    print(f"Server running on port {PORT}")
+    print(f"Server is running on port {PORT}")
     server_socket.bind(('', PORT))
     server_socket.listen(1)
     while True:
